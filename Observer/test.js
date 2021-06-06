@@ -1,0 +1,11 @@
+"use strict";
+exports.__esModule = true;
+var TwitchChannel_1 = require("./TwitchChannel");
+var Follower_1 = require("./Follower");
+var channel = new TwitchChannel_1.TwitchChannel();
+var follower1 = new Follower_1.Follower(channel);
+var follower2 = new Follower_1.Follower(channel);
+channel.suscribe(follower1);
+channel.suscribe(follower2);
+channel.unsuscribe(follower1);
+channel.goingLive('Jugando rankeds en Valorant !');
